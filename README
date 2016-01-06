@@ -1,0 +1,31 @@
+This program takes several command line arguments, all of which require a secondary argument immediately following it
+	Options include:
+		redType [Computer/Human] - allows you to change red player from an ai player to a human player or vice-versa
+		blackType [Computer/Human] - allows you to change black player from an ai player to a human player or vice-versa
+
+		redDepth [integer]	- 	allows you to adjust the depth the search goes to 
+								for the red player, does nothing if redType is human
+		blackDepth [integer] - 	allows you to adjust the depth the search goes to 
+								for the black player, does nothing if blackType is human
+
+		redPrune [True/False] - allows you to turn the alpha-beta pruning on (true) or off (false),
+								this has no effect if redType is human
+		blackPrune [True/False]-allows you to turn the alpha-beta pruning on (true) or off (false),
+								this has no effect if blackType is human
+
+The options above are intended to allow for various options when attempting to evaluate the efficiency of different variations of the miniMax algorithm. The "default" settings, for when no values are given:	
+	blackType is human
+	redType is computer
+
+	blackDepth is not applicable
+	redDepth is 7
+
+	blackPrune is true
+	redPrune is not applicable
+
+
+Java classes directly related to the MiniMax algorithm include:
+MiniMaxAlgorithm
+MiniMaxHelper
+AlphaBetaPruneHelper
+DefaultMiniMaxHelper
