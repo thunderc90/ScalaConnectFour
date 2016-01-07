@@ -16,10 +16,10 @@ object ConnectFourScala {
     println("loading typesafe config")
     val config = ConfigFactory.load()
 
-    val redPlayerType = config.as[PlayerSetting]("red-player")
+    val redPlayer = config.as[PlayerSetting]("red-player")
     //val blackPlayer = config.as[PlayerSetting]("black-player")
 
-    println("Red Player: \n" + redPlayerType)
+    println("Red Player: \n" + redPlayer)
     //println("Black Player \n" + blackPlayer)
 
   }
