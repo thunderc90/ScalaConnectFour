@@ -1,4 +1,5 @@
-import com.github.kxbmap.configs.syntax._
+import net.ceedubs.ficus.Ficus._
+import net.ceedubs.ficus.readers.ArbitraryTypeReader._
 import com.typesafe.config.ConfigFactory
 
 /**
@@ -15,11 +16,11 @@ object ConnectFourScala {
     println("loading typesafe config")
     val config = ConfigFactory.load()
 
-    val redPlayer = config.get[PlayerSetting]("red-player")
-    val blackPlayer = config.get[PlayerSetting]("black-player")
+    val redPlayerType = config.as[PlayerSetting]("red-player")
+    //val blackPlayer = config.as[PlayerSetting]("black-player")
 
-    println("Red Player: \n" + redPlayer)
-    println("Black Player \n" + blackPlayer)
+    println("Red Player: \n" + redPlayerType)
+    //println("Black Player \n" + blackPlayer)
 
   }
 
