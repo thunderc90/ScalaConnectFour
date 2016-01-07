@@ -7,6 +7,8 @@ import com.typesafe.config.ConfigFactory
  */
 object ConnectFourScala {
 
+  import ScalaPlayerType._
+
   type ArgsMap = Map[Symbol, Any]
 
   def main(args: Array[String]): Unit = {
@@ -17,10 +19,10 @@ object ConnectFourScala {
     val config = ConfigFactory.load()
 
     val redPlayer = config.as[PlayerSetting]("red-player")
-    //val blackPlayer = config.as[PlayerSetting]("black-player")
+    val blackPlayer = config.as[PlayerSetting]("black-player")
 
     println("Red Player: \n" + redPlayer)
-    //println("Black Player \n" + blackPlayer)
+    println("Black Player \n" + blackPlayer)
 
   }
 
